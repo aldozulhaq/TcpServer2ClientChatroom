@@ -57,9 +57,6 @@ def recieve():
 
         thread = threading.Thread(target = handle, args = (client,))
         thread.start()
-    while len(clients) > limitUser:
-        client, address = server.accept()
-        print(f"Connected with {str(address)}")
 
 print("Server is listening...")
 recieve() #call recieve method
